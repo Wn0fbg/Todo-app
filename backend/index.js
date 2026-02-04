@@ -12,5 +12,3 @@ app.use("/todos", todoRoutes);
 app.listen(5000, () => {
   console.log("Server is listening on port 5000");
 });
-
-// npm init -y  npm i express pg cors  npm i nodemon -D

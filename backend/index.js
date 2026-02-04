@@ -1,11 +1,16 @@
 import express from "express";
+import cors from "cors";
+import todoRoutes from "./routes/todos.js";
 
 const app = express();
 
-app.get("/about", (req, res) => {
-  res.send("Hello world");
-});
+app.use(cors());
+app.use(express.json());
+
+app.use("/todos", todoRoutes);
 
 app.listen(5000, () => {
-  console.log("Server listening on port 5000");
+  console.log("Server is listening on port 5000");
 });
+
+// npm init -y  npm i express pg cors  npm i nodemon -D
